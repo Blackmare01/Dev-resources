@@ -1,0 +1,20 @@
+from tkinter import *
+
+b = Tk()
+b.minsize(width=600, height=600)
+b.maxsize(width=600, height=600)
+b.title("Tkinter guides")
+
+def calculate(): # Define function code
+  label.configure(text=str(eval(entry.get())))
+
+label = Label(b, text="Calculator", font=("arial",15), fg="white", bg="black", bd=5, relief=RIDGE) # creating Label
+label.place(x=10, y=10) # widget positioning
+
+entry = Entry(b, font=("arial",15), fg="white", bg="black", bd=5, relief=RIDGE) # Creating Entry
+entry.place(x=10, y=80) # widget positioning
+
+button = Button(b, text="Answer", font=("arial",15), fg="white", bg="black", bd=5, relief=RIDGE, command=calculate)
+button.place(x=10, y=160) # widget positioning
+
+b.mainloop()
